@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,9 +13,13 @@ export class SidebarComponent implements OnInit {
     {"name": "Мои предметы", "icon": "laptop_chromebook", "path": "my-subjects"},
     {"name": "Мои сообщения", "icon": "chat_bubble_outline", "path": "my-messages"}
   ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    let currentUrl = this.router.url
+    console.log(currentUrl)
+    let temp = this.items.find(o => currentUrl.includes(o.path))
+    this.margin = this.items.indexOf(temp)
   }
 
   onSelect(name) {
