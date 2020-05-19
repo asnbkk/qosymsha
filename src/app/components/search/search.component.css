@@ -1,0 +1,22 @@
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background: #F1F3F4;
+    height: 40px;
+    align-items: center;
+    margin-top: -4px;
+    padding: 0 1rem;
+    border-radius: 5px;
+    width: 70%;
+}
+.search_icon span{
+    display: grid;
+    align-items: center;
+    color: #828282;
+}
+input {
+    background: #F1F3F4;
+    border: none;
+    color: #828282;
+    padding: 0 1rem;
+}
