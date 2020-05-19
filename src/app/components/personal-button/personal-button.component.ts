@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-button.component.css']
 })
 export class PersonalButtonComponent implements OnInit {
-
+  name = "baracuda"
+  status = "dead inside"
   constructor() { }
 
   ngOnInit(): void {
