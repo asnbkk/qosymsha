@@ -1,0 +1,20 @@
+<div class="sidebar">
+    <div class="sidebar_wrapper">
+        <div class="sidebar_bar" [ngStyle]="{'top': (margin * 40) + 'px'}"></div>
+        <div *ngFor="let i of items">
+            <div 
+            class="sidebar_item" 
+            routerLink="{{i.path}}" 
+            routerLinkActive="active"
+            (click)="onSelect(i.name)"
+            >
+                <span class="material-icons">
+                    {{i.icon}}
+                </span>
+                <span>
+                    {{i.name}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

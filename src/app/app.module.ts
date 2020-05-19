@@ -7,6 +7,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { SvgComponent } from './components/svg/svg.component';
 import { SearchComponent } from './components/search/search.component';
 import { PersonalButtonComponent } from './components/personal-button/personal-button.component';
+import { StudentHomeComponent } from './pages/student-home/student-home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AddCourseComponent } from './pages/add-course/add-course.component';
+import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
+import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { PersonalButtonComponent } from './components/personal-button/personal-b
     HeaderComponent,
     SvgComponent,
     SearchComponent,
-    PersonalButtonComponent
+    PersonalButtonComponent,
+    StudentHomeComponent,
+    SidebarComponent,
+    AddCourseComponent,
+    MySubjectsComponent,
+    MyMessagesComponent
   ],
   imports: [
     BrowserModule,
