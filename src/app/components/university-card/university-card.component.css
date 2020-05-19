@@ -1,0 +1,35 @@
+.card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    /* align-items: center; */
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card_img {
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 260px;
+}
+.card_img img {
+    max-width: 100%;
+    margin-top: -30px;
+}
+.card_text {
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr auto auto;
+    align-self: flex-start;
+    padding-top: 1rem;
+    height: calc(100px - 1rem);
+}
+.card_text__see-more {
+    position: absolute;
+    bottom: 1rem;
+}
+.card_text__city {
+    position: absolute;
+    bottom: 2rem;
+}

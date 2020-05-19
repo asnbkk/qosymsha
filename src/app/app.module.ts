@@ -12,6 +12,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AddCourseComponent } from './pages/add-course/add-course.component';
 import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
+import { TextComponent } from './components/text/text.component';
+import { UniversityCardComponent } from './components/university-card/university-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
     SidebarComponent,
     AddCourseComponent,
     MySubjectsComponent,
-    MyMessagesComponent
+    MyMessagesComponent,
+    TextComponent,
+    UniversityCardComponent
   ],
   imports: [
     BrowserModule,

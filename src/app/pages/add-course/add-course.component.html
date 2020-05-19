@@ -1,1 +1,11 @@
-<p>add-course works!</p>
+<div class="ac">
+    <div class="ac_left">
+        <app-text [text]="'Выбрать университет'" [type]="'title'" [counter]="1"></app-text>
+        <div class="ac_university-list">
+            <div *ngFor="let u of universities">
+                <app-university-card [university]="u"></app-university-card>
+            </div>
+        </div>
+    </div>
+    <div class="ac_right"></div>
+</div>
