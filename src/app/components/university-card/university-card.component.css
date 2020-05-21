@@ -4,15 +4,24 @@
     grid-gap: 1rem;
     /* align-items: center; */
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
     transition: 0.2s;
+    /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05); */
+}
+.card .card_text {
+    color: #414141;
+}
+.card:not(.not-selected):hover .card_text {
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
+    transition: 0.1s;
+    color: #000;
 }
 .card_img {
     height: 100px;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 260px;
 }
 .card_img img {
@@ -37,12 +46,13 @@
 }
 .card_status {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: calc(1rem - 2px);
+    right: 0.5rem;
     color: #04A039;
     transition: 0.2s;
 }
 .not-selected {
     opacity: 0.5;
     transition: 0.2s;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
