@@ -3,6 +3,10 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 1rem;
 }
+.ac_left {
+    display: grid;
+    grid-gap: 1rem;
+}
 .ac_university-list {
     display: grid;
     grid-gap: 1rem;

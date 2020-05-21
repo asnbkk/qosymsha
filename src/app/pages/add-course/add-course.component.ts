@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UniversityService } from 'src/app/services/university.service';
 
 @Component({
   selector: 'app-add-course',
@@ -6,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent implements OnInit {
-  universities = [
-    {"img": "assets/img/1.jpg", "name": "Казахстанско-Британский технический университет", "city": "Алматы"},
-    {"img": "assets/img/2.jpg", "name": "Назарбаев Университет", "city": "Астана"}
-  ]
-  constructor() { }
+  faculty: boolean = false
+  universities = []
+  constructor(private universityService: UniversityService) { }
 
   ngOnInit(): void {
+    this.getUniversity()
   }
 
-}
+  getUniversity() {
+    this.universityService.getUniversities().subscribe(data => {
+      this.universities = data
+    })
+  }
+
+  onUniversitySelect(id) {
+    this.faculty = true
+  }
+} 

@@ -1,10 +1,16 @@
 <div class="ac">
     <div class="ac_left">
-        <app-text [text]="'Выбрать университет'" [type]="'title'" [counter]="1"></app-text>
-        <div class="ac_university-list">
-            <div *ngFor="let u of universities">
-                <app-university-card [university]="u"></app-university-card>
+        <div class="university">
+            <app-text [text]="'Выбрать университет'" [type]="'title'" [counter]="1"></app-text>
+            <div class="ac_university-list">
+                <div *ngFor="let u of universities">
+                    <app-university-card [university]="u" (click)="onUniversitySelect(u.id)"></app-university-card>
+                </div>
             </div>
+        </div>
+        <div class="faculty" *ngIf="faculty">
+            <app-text [text]="'Выбрать факультет'" [type]="'title'" [counter]="2"></app-text>
+            hello
         </div>
     </div>
     <div class="ac_right"></div>

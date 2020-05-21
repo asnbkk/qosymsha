@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,6 +14,7 @@ import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { TextComponent } from './components/text/text.component';
 import { UniversityCardComponent } from './components/university-card/university-card.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { UniversityCardComponent } from './components/university-card/university
     MySubjectsComponent,
     MyMessagesComponent,
     TextComponent,
-    UniversityCardComponent
+    UniversityCardComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
