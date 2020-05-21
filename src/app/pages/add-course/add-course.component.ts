@@ -39,10 +39,12 @@ export class AddCourseComponent implements OnInit {
   }
 
   onFacultySelect(name) {
-    this.selectedCardName = name
     this.course = true
-    this.courseService.getCourses().subscribe(data => {
+    this.selectedCardName = name
+
+    this.courseService.getCourses(name).subscribe(data => {
       this.courses = data
+      console.log(this.courses, "ello")
     })
   }
 

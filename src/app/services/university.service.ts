@@ -7,7 +7,9 @@ import { api } from '../../assets/data/env'
   providedIn: 'root'
 })
 export class UniversityService {
-  private url = api + "univers/"
+  // private url = "assets/data/university.json"
+  private url = api + 'univers/'
+
   constructor(private http: HttpClient) { }
 
   getUniversities(): Observable<any> {
