@@ -1,4 +1,4 @@
-<div class="card">
+<div [className]="status != university.faculties && status.length != 0  ? 'card not-selected' : 'card'">
     <div class="card_img"><img src="{{university.img}}" alt=""></div>
     <div class="card_text">
         <div class="card_text__name">

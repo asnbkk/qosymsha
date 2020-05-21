@@ -11,7 +11,7 @@ export class UniversityCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.status)
+    
   }
 
 }
