@@ -8,7 +8,10 @@ import { UniversityService } from 'src/app/services/university.service';
 })
 export class AddCourseComponent implements OnInit {
   faculty: boolean = false
+  universityStatus: boolean = false
+  
   universities = []
+  faculties = []
   constructor(private universityService: UniversityService) { }
 
   ngOnInit(): void {
@@ -21,7 +24,11 @@ export class AddCourseComponent implements OnInit {
     })
   }
 
-  onUniversitySelect(id) {
+  onUniversitySelect(name) {
+    this.universityStatus = true
     this.faculty = true
+    let uni = this.universities.find(o => o.name == name)
+    this.faculties = uni.faculties
+    console.log(this.faculties)
   }
 } 

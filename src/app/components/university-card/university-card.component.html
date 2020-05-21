@@ -1,9 +1,21 @@
 <div class="card">
     <div class="card_img"><img src="{{university.img}}" alt=""></div>
     <div class="card_text">
-        <div class="card_text__name"><app-text [type]="'bold'" [text]="university.name"></app-text></div>
-        <div class="card_text__city"><app-text [type]="'smallSecondary'" [text]="university.city"></app-text></div>
-        <div class="card_text__see-more"><app-text [type]="'smallBlue'" [text]="'Подробнее'"></app-text></div>
+        <div class="card_text__name">
+            <app-text [type]="'bold'" [text]="university.name"></app-text>
+        </div>
+        <div class="card_text__city">
+            <app-text [type]="'smallSecondary'" [text]="university.city"></app-text>
+        </div>
+        <div class="card_text__see-more">
+            <app-text [type]="'smallBlue'" [text]="'Подробнее'"></app-text>
+        </div>
     </div>
-    <div class="card_status"></div>
+    <div *ngIf="status">
+        <div class="card_status">
+            <span class="material-icons">
+                check_circle_outline
+            </span>
+        </div>
+    </div>
 </div>

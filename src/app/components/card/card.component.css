@@ -1,0 +1,13 @@
+.card {
+    height: 40px;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    padding: 0 1rem;
+    background: #fff;
+    cursor: pointer;
+}
+.card_title {
+    font-weight: bold;
+}

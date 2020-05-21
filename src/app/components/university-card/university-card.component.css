@@ -6,6 +6,7 @@
     background: #fff;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
 }
 .card_img {
     height: 100px;
@@ -32,4 +33,10 @@
 .card_text__city {
     position: absolute;
     bottom: 2rem;
+}
+.card_status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #04A039;
 }

@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UniversityCardComponent implements OnInit {
   @Input() university
+  @Input() status = true
   constructor() { }
 
   ngOnInit(): void {

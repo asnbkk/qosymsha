@@ -15,6 +15,7 @@ import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { TextComponent } from './components/text/text.component';
 import { UniversityCardComponent } from './components/university-card/university-card.component';
 import { from } from 'rxjs';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { from } from 'rxjs';
     MyMessagesComponent,
     TextComponent,
     UniversityCardComponent,
+    CardComponent,
   ],
   imports: [
     HttpClientModule,
