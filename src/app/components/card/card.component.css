@@ -4,10 +4,28 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem 0 1rem;
     background: #fff;
     cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+.card:hover .card_title {
+    color: #000;
+    transition: 0.2s;
 }
 .card_title {
     font-weight: bold;
+    color: #414141;
+}
+.card_status {
+    /* position: absolute; */
+    display: grid;
+    align-items: center;
+    color: #04A039;
+    transition: 0.2s;
+}
+.not-selected {
+    opacity: 0.3;
+    transition: 0.2s;
 }

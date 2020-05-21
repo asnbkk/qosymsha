@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() name
+  @Input() status
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.status)
   }
 
 }

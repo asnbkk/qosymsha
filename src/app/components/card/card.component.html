@@ -1,6 +1,12 @@
-<div class="card">
+<div [className]="status != name.name && status != null ? 'card not-selected' : 'card'">
     <div class="card_title">
         {{name.name}}
     </div>
-    <div class="card_status"></div>
+    <div *ngIf="name.name == status">
+        <div class="card_status">
+            <span class="material-icons">
+                check_circle_outline
+            </span>
+        </div>
+    </div>
 </div>

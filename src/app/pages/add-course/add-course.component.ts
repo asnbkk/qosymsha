@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UniversityService } from 'src/app/services/university.service';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-add-course',
@@ -8,11 +9,17 @@ import { UniversityService } from 'src/app/services/university.service';
 })
 export class AddCourseComponent implements OnInit {
   faculty: boolean = false
-  // universityStatus: boolean = false
-  
+  course: boolean = false
+
+  selectedCardName
+    
   universities = []
   faculties = []
-  constructor(private universityService: UniversityService) { }
+  courses = []
+  constructor(
+    private universityService: UniversityService,
+    private courseService: CourseService
+    ) { }
 
   ngOnInit(): void {
     this.getUniversity()
@@ -25,10 +32,21 @@ export class AddCourseComponent implements OnInit {
   }
 
   onUniversitySelect(name) {
-    // this.universityStatus = true
     this.faculty = true
     let uni = this.universities.find(o => o.name == name)
     this.faculties = uni.faculties
     console.log(this.faculties)
+  }
+
+  onFacultySelect(name) {
+    this.selectedCardName = name
+    this.course = true
+    this.courseService.getCourses().subscribe(data => {
+      this.courses = data
+    })
+  }
+
+  onCourseSelect(name) {
+
   }
 } 

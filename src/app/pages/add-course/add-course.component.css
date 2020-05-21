@@ -7,11 +7,7 @@
     display: grid;
     grid-gap: 2rem;
 }
-.ac_university-list {
-    display: grid;
-    grid-gap: 1rem;
-}
-.ac_faculty-list {
+.ac_list {
     display: grid;
     grid-gap: 1rem;
 }
