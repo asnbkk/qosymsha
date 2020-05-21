@@ -25,6 +25,14 @@
                 </div>
             </div>
         </div>
+        <div class="tutor">
+            <app-text [text]="'Выбрать умника'" [type]="'title'" [counter]="4"></app-text>
+            <div class="ac_list">
+                <div *ngFor="let t of tutors">
+                    <app-card (click)="onCourseSelect(t.name)" [name]="t.name"></app-card>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="ac_right"></div>
 </div>
