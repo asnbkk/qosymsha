@@ -4,8 +4,7 @@
             <app-text [text]="'Выбрать университет'" [type]="'title'" [counter]="1"></app-text>
             <div class="ac_university-list">
                 <div *ngFor="let u of universities">
-                    <app-university-card [university]="u" (click)="onUniversitySelect(u.name)"></app-university-card>
-                </div>
+                    <app-university-card [university]="u" [status]="faculties" (click)="onUniversitySelect(u.name)"></app-university-card>
             </div>
         </div>
         <div class="faculty" *ngIf="faculty">

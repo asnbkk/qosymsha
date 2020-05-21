@@ -7,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UniversityCardComponent implements OnInit {
   @Input() university
-  @Input() status = true
+  @Input() status
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.status)
   }
 
 }

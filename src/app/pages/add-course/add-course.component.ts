@@ -8,7 +8,7 @@ import { UniversityService } from 'src/app/services/university.service';
 })
 export class AddCourseComponent implements OnInit {
   faculty: boolean = false
-  universityStatus: boolean = false
+  // universityStatus: boolean = false
   
   universities = []
   faculties = []
@@ -25,7 +25,7 @@ export class AddCourseComponent implements OnInit {
   }
 
   onUniversitySelect(name) {
-    this.universityStatus = true
+    // this.universityStatus = true
     this.faculty = true
     let uni = this.universities.find(o => o.name == name)
     this.faculties = uni.faculties
