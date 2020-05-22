@@ -3,6 +3,7 @@
     grid-template-columns: 1fr auto;
     grid-gap: 1rem;
     align-items: center;
+    cursor: pointer;
 }
 .personal_wrapper {
     text-align: end;

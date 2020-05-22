@@ -6,6 +6,7 @@ import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { MySettingsComponent } from './pages/my-settings/my-settings.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'student', component: StudentHomeComponent, children: [
     {path: 'add-course', component: AddCourseComponent},
     {path: 'my-subjects', component: MySubjectsComponent},
-    {path: 'my-messages', component: MyMessagesComponent}
+    {path: 'my-messages', component: MyMessagesComponent},
+    {path: 'my-settings', component: MySettingsComponent}
   ]}
 ];
 

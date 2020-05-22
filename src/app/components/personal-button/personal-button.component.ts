@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personal-button',
@@ -6,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-button.component.css']
 })
 export class PersonalButtonComponent implements OnInit {
-  name = "baracuda"
+  name
   status = "dead inside"
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem('username')
+  }
+
+  onClick() {
+    this.router.navigate(['/student/my-settings'])
   }
 
 }

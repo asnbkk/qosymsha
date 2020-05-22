@@ -64,6 +64,7 @@ export class RegistrationComponent implements OnInit {
         else {
           this.router.navigate(['/student'])
           localStorage.setItem('token', res.token)
+          localStorage.setItem('username', this.userModel.name)
           //TODO: hello argun
         }
       })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-sidebar',
@@ -8,12 +9,23 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
   margin
+  url
   items = [
     {"name": "Добавить предмет", "icon": "add", "path": "add-course"},
     {"name": "Мои предметы", "icon": "laptop_chromebook", "path": "my-subjects"},
-    {"name": "Мои сообщения", "icon": "chat_bubble_outline", "path": "my-messages"}
+    {"name": "Мои сообщения", "icon": "chat_bubble_outline", "path": "my-messages"},
+    {"name": "Мои данные", "icon": "perm_identity", "path": "my-settings"},
   ]
-  constructor(private router: Router) { }
+  constructor(private router: Router, location: Location) {
+    router.events.subscribe(() => {
+      // if (location.path() != "") {
+        let arr = location.path().split('/')
+        this.url = arr[arr.length - 1]  
+        this.onSelect()
+        //seems working
+      // } 
+    });
+   }
 
   ngOnInit(): void {
     let currentUrl = this.router.url
@@ -21,8 +33,8 @@ export class SidebarComponent implements OnInit {
     this.margin = this.items.indexOf(temp)
   }
 
-  onSelect(name) {
-    let temp = this.items.find(o => o.name == name)
+  onSelect() {
+    let temp = this.items.find(o => o.path == this.url)
     this.margin = this.items.indexOf(temp)
   }
 
