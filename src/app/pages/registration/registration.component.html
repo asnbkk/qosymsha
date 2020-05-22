@@ -9,7 +9,7 @@
             <app-text [type]="'auth-title'" [text]="'Присоединяйтесь'"></app-text>
         </div>
         <div class="r_content__email">
-            <input [(ngModel)]="userModel.email" name="email" type="text" (blur)="_emailValidation($event)" placeholder="Адрес электронной почты">
+            <input [(ngModel)]="userModel.email" name="email" type="text" (input)="_emailType()" (blur)="_emailValidation($event)" placeholder="Адрес электронной почты">
             <!-- <div *ngIf="emailValidation">
                 <div class="input_status">
                     <span class="material-icons">
@@ -17,6 +17,9 @@
                     </span>
                 </div>
             </div> -->
+            <div *ngIf="emailDuplicate">
+                <div class="toggle_message">Такой E-mail уже используется!</div>
+            </div>
             <div *ngIf="emailValidation == false">
                 <div class="input_status">
                     <span class="material-icons">

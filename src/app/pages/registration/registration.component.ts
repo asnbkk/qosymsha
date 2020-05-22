@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
   mode = 'password'
   emailValidation
+  emailDuplicate = false
   passwordValidation
   // firstInput = 'blur'
   constructor(
@@ -31,6 +32,11 @@ export class RegistrationComponent implements OnInit {
       this.mode = 'text'
     else this.mode = 'password'
 
+  }
+  _emailType() {
+    this.emailValidation = true
+    this.emailDuplicate = false
+    //seems to be ok
   }
   _emailValidation(email) {
     // this.firstInput = 'input'
@@ -53,13 +59,16 @@ export class RegistrationComponent implements OnInit {
       this.userService.onRegsiter(this.userModel).subscribe(res => {
         if (res.message) {
           console.log('hello')
+          this.emailDuplicate = true
+          this.emailValidation = false
+          // setTimeout(() => {
+          // })
         }
         else {
           this.router.navigate(['/student'])
           localStorage.setItem('token', res.token)
+          //TODO: hello argun
         }
-        //TODO: hello argun
-
       })
     }
     if (this.userModel.password == '') this.passwordValidation = false
