@@ -18,6 +18,7 @@ import { from } from 'rxjs';
 import { CardComponent } from './components/card/card.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ButtonComponent } from './components/button/button.component';
     CardComponent,
     LandingComponent,
     ButtonComponent,
+    RegistrationComponent,
   ],
   imports: [
     HttpClientModule,
