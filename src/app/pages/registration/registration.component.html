@@ -1,10 +1,30 @@
 <div class="header">
-    <div class="header_logo"><app-svg routerLink="/landing" [name]="'logo'"></app-svg></div>
+    <div class="header_logo">
+        <app-svg routerLink="/landing" [name]="'logo'"></app-svg>
+    </div>
 </div>
 <div class="r">
     <div class="r_content">
-        <div class="r_content__title"><app-text [type]="'auth-title'" [text]="'Присоединяйтесь'"></app-text></div>
-        <input type="text" placeholder="Адрес электронной почты">
+        <div class="r_content__title">
+            <app-text [type]="'auth-title'" [text]="'Присоединяйтесь'"></app-text>
+        </div>
+        <div class="r_content__email">
+            <input type="text" (blur)="validation($event)" placeholder="Адрес электронной почты">
+            <!-- <div *ngIf="emailValidation">
+                <div class="input_status">
+                    <span class="material-icons">
+                        check
+                    </span>
+                </div>
+            </div> -->
+            <div *ngIf="emailValidation == false">
+                <div class="input_status">
+                    <span class="material-icons">
+                        error_outline
+                    </span>
+                </div>
+            </div>
+        </div>
         <div class="r_content__password">
             <input type="{{mode}}" placeholder="Пароль">
             <div class="see_pass" (click)="seePass()">
@@ -25,11 +45,11 @@
             <div class="r_content__bottom___item">
                 <app-svg [name]="'gmail'"></app-svg>
                 Войти с Gmail
-            </div> 
+            </div>
             <div class="r_content__bottom___item">
                 <app-svg [name]="'vk'"></app-svg>
                 Войти с ВКонтакте
-            </div>       
+            </div>
         </div>
     </div>
 </div>

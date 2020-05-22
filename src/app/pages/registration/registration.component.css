@@ -46,6 +46,21 @@ input {
     align-items: center;
     margin-top: 4px;
     right: 1rem;
+    cursor: pointer;
+}
+.r_content__email {
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+.input_status {
+    position: absolute;
+    right: -2rem;
+    top: 9px;
+}
+.input_status span {
+    color: #0700FF;
+    cursor: default;
 }
 .r_content__button {
     display: grid;
