@@ -12,6 +12,12 @@ export class RegistrationComponent implements OnInit {
   // firstInput = 'blur'
   constructor() { }
 
+  userModel = {
+    email: '',
+    name: '',
+    password: ''
+  }
+  
   ngOnInit(): void {
   }
   seePass() {
@@ -29,4 +35,11 @@ export class RegistrationComponent implements OnInit {
     // else if (email.target.value == '') this.emailValidation = false
     else this.emailValidation = false
   }
+  onSubmit() {
+    if(this.emailValidation) {
+      this.userModel.name = 'hello'
+      console.log(this.userModel)
+    }
+  }
+ 
 }

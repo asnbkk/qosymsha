@@ -14,7 +14,7 @@ import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { TextComponent } from './components/text/text.component';
 import { UniversityCardComponent } from './components/university-card/university-card.component';
-import { from } from 'rxjs';
+import { FormsModule } from '@angular/forms'
 import { CardComponent } from './components/card/card.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -42,7 +42,8 @@ import { RegistrationComponent } from './pages/registration/registration.compone
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

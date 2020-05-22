@@ -9,7 +9,7 @@
             <app-text [type]="'auth-title'" [text]="'Присоединяйтесь'"></app-text>
         </div>
         <div class="r_content__email">
-            <input type="text" (blur)="validation($event)" placeholder="Адрес электронной почты">
+            <input [(ngModel)]="userModel.email" name="email" type="text" (blur)="validation($event)" placeholder="Адрес электронной почты">
             <!-- <div *ngIf="emailValidation">
                 <div class="input_status">
                     <span class="material-icons">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="r_content__password">
-            <input type="{{mode}}" placeholder="Пароль">
+            <input [(ngModel)]="userModel.password" name="password" type="{{mode}}" placeholder="Пароль">
             <div class="see_pass" (click)="seePass()">
                 <div *ngIf="mode == 'password'">
                     <app-svg [name]="'openEye'"></app-svg>
@@ -36,8 +36,8 @@
                 </div>
             </div>
         </div>
-        <div class="r_content__button">
-            <app-button [type]="'primary'" [text]="'Зарегистрироваться'"></app-button>
+        <div [className]="emailValidation == false ? 'r_content__button disabled' : 'r_content__button'">
+            <app-button (click)="onSubmit()" [type]="'primary'" [text]="'Зарегистрироваться'"></app-button>
         </div>
         <div class="r_content__switch">Уже есть аккаунт? <span>Войти</span></div>
         <div class="r_content__bottom">

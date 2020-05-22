@@ -48,6 +48,11 @@ input {
     right: 1rem;
     cursor: pointer;
 }
+.disabled {
+    opacity: 0.2;
+    cursor: default;
+    transition: 0.2s;
+}
 .r_content__email {
     position: relative;
     display: grid;
@@ -65,6 +70,7 @@ input {
 .r_content__button {
     display: grid;
     grid-template-columns: auto 1fr;
+    transition: 0.2s;
 }
 .r_content__switch {
     font-size: 12px;
