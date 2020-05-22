@@ -17,7 +17,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     let currentUrl = this.router.url
-    console.log(currentUrl)
     let temp = this.items.find(o => currentUrl.includes(o.path))
     this.margin = this.items.indexOf(temp)
   }

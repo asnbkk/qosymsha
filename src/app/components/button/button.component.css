@@ -1,0 +1,27 @@
+.primary-button {
+    height: 40px;
+    font-weight: bold;
+    color: #fff;
+    background: #0700FF;
+    display: grid;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.text-button {
+    height: 40px;
+    font-weight: bold;
+    color: #0700FF;
+    background: transparent;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.text-button:hover {
+    background: rgba(8, 0, 255, 0.096);
+    transition: 0.2s;
+}

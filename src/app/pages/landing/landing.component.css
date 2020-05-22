@@ -1,0 +1,43 @@
+.header {
+    background: #fff;
+    padding: 0 1rem;
+    height: 52px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    position: relative;
+}
+.landing {
+    height: calc(100vh);
+    background: #fff;
+    display: grid;
+    justify-items: center;
+    grid-gap: 36px;
+    align-items: center;
+    margin-top: -52px;
+    align-content: center;
+    /* grid-template-rows: auto auto auto 1fr; */
+}
+.header_buttons {
+    position: absolute;
+    right: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+}
+.landing_main {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 80px;
+    display: grid;
+    text-align: center;
+}
+.landing_secondary {
+    text-align: center;
+    line-height: 20px;
+}
+.landing_buttons {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}

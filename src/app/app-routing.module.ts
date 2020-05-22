@@ -4,9 +4,12 @@ import { StudentHomeComponent } from './pages/student-home/student-home.componen
 import { AddCourseComponent } from './pages/add-course/add-course.component';
 import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 
 const routes: Routes = [
+  {path: '', redirectTo: '/landing', pathMatch: 'full'},
+  {path: 'landing', component: LandingComponent},
   {path: 'student', component: StudentHomeComponent, children: [
     {path: 'add-course', component: AddCourseComponent},
     {path: 'my-subjects', component: MySubjectsComponent},
