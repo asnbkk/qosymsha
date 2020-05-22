@@ -58,11 +58,8 @@ export class RegistrationComponent implements OnInit {
 
       this.userService.onRegsiter(this.userModel).subscribe(res => {
         if (res.message) {
-          console.log('hello')
           this.emailDuplicate = true
           this.emailValidation = false
-          // setTimeout(() => {
-          // })
         }
         else {
           this.router.navigate(['/student'])

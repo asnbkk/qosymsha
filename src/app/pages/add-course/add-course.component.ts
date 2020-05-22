@@ -11,8 +11,10 @@ import { TutorService } from 'src/app/services/tutor.service';
 export class AddCourseComponent implements OnInit {
   faculty: boolean = false
   course: boolean = false
+  tutor: boolean = false
 
   selectedCardName
+  selectedCourseName
     
   universities = []
   faculties = []
@@ -51,6 +53,8 @@ export class AddCourseComponent implements OnInit {
   }
 
   onCourseSelect(name) {
+    this.selectedCourseName = name
+    this.tutor = true
     this.tutorService.getByCourse(name).subscribe(data => {
       this.tutors = data
     })

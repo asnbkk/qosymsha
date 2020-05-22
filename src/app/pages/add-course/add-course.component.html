@@ -21,11 +21,11 @@
             <app-text [text]="'Выбрать предмет'" [type]="'title'" [counter]="3"></app-text>
             <div class="ac_list">
                 <div *ngFor="let c of courses">
-                    <app-card (click)="onCourseSelect(c.name)" [name]="c.name"></app-card>
+                    <app-card (click)="onCourseSelect(c.name)" [status]="selectedCourseName" [name]="c.name"></app-card>
                 </div>
             </div>
         </div>
-        <div class="tutor">
+        <div class="tutor" *ngIf="tutor">
             <app-text [text]="'Выбрать умника'" [type]="'title'" [counter]="4"></app-text>
             <div class="ac_list">
                 <div *ngFor="let t of tutors">
