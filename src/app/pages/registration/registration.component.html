@@ -9,7 +9,7 @@
             <app-text [type]="'auth-title'" [text]="'Присоединяйтесь'"></app-text>
         </div>
         <div class="r_content__email">
-            <input [(ngModel)]="userModel.email" name="email" type="text" (blur)="validation($event)" placeholder="Адрес электронной почты">
+            <input [(ngModel)]="userModel.email" name="email" type="text" (blur)="_emailValidation($event)" placeholder="Адрес электронной почты">
             <!-- <div *ngIf="emailValidation">
                 <div class="input_status">
                     <span class="material-icons">
@@ -26,13 +26,20 @@
             </div>
         </div>
         <div class="r_content__password">
-            <input [(ngModel)]="userModel.password" name="password" type="{{mode}}" placeholder="Пароль">
+            <input [(ngModel)]="userModel.password" name="password" type="{{mode}}" placeholder="Пароль" (input)="_passwordValidation($event)">
             <div class="see_pass" (click)="seePass()">
                 <div *ngIf="mode == 'password'">
                     <app-svg [name]="'openEye'"></app-svg>
                 </div>
                 <div *ngIf="mode == 'text'">
                     <app-svg [name]="'closeEye'"></app-svg>
+                </div>
+            </div>
+            <div *ngIf="passwordValidation == false">
+                <div class="input_status">
+                    <span class="material-icons">
+                        error_outline
+                    </span>
                 </div>
             </div>
         </div>

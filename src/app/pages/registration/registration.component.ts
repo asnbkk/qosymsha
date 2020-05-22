@@ -9,6 +9,7 @@ import { EventEmitter } from 'protractor';
 export class RegistrationComponent implements OnInit {
   mode = 'password'
   emailValidation
+  passwordValidation
   // firstInput = 'blur'
   constructor() { }
 
@@ -26,7 +27,7 @@ export class RegistrationComponent implements OnInit {
     else this.mode = 'password'
     
   }
-  validation(email) {
+  _emailValidation(email) {
     // this.firstInput = 'input'
     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(email.target.value.match(mailformat)) {
@@ -35,11 +36,17 @@ export class RegistrationComponent implements OnInit {
     // else if (email.target.value == '') this.emailValidation = false
     else this.emailValidation = false
   }
-  onSubmit() {
-    if(this.emailValidation) {
-      this.userModel.name = 'hello'
-      console.log(this.userModel)
+  _passwordValidation(pass) {
+    if(pass != '') {
+      this.passwordValidation = true
     }
+  }
+  onSubmit() {
+    if(this.emailValidation && this.passwordValidation) {
+      this.userModel.name = this.userModel.email.split('@')[0]
+      console.log(this.userModel)
+    }   
+    if(this.userModel.password == '') this.passwordValidation = false
   }
  
 }

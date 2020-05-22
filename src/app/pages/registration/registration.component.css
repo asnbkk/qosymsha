@@ -50,7 +50,6 @@ input {
 }
 .disabled {
     opacity: 0.2;
-    cursor: default;
     transition: 0.2s;
 }
 .r_content__email {
