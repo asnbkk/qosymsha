@@ -1,9 +1,23 @@
-<div class="personal" (click)="onClick()">
+<div class="personal" (click)="active = !active">
     <div class="personal_wrapper">
         <div class="personal_name">{{name}}</div>
         <div class="personal_status">{{status}}</div>
     </div>
     <div class="personal_avatar">
         <app-svg [name]="'avatar'"></app-svg>
+    </div>
+</div>
+<div (click)="active = false" [className]="active ? 'dropdown_wrapper' : 'dropdown_wrapper disabled'">
+    <div class="dropdown">
+        <div class="dropdown_item" (click)="onClick()">
+            <span class="material-icons">
+                perm_identity
+            </span>
+            Мои данные
+        </div>
+        <div class="dropdown_item" (click)="onLogout()">
+            <app-svg [name]="'log-out'"></app-svg>
+            Выйти
+        </div>
     </div>
 </div>

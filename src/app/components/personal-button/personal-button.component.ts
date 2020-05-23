@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PersonalButtonComponent implements OnInit {
   name
+  active: boolean = false
   status = "dead inside"
   constructor(private router: Router) { }
 
@@ -17,6 +18,11 @@ export class PersonalButtonComponent implements OnInit {
 
   onClick() {
     this.router.navigate(['/student/my-settings'])
+  }
+
+  onLogout() {
+    localStorage.clear()
+    this.router.navigate(['/'])
   }
 
 }
