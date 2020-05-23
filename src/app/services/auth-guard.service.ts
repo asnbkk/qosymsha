@@ -10,8 +10,8 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(): boolean {
 
-      if (sessionStorage.getItem('token') == null) {
-          this.router.navigate(['/landing']);
+      if (localStorage.getItem('qosymsha_token') == null) {
+          this.router.navigate(['/']);
           return false;
       }
       return true;

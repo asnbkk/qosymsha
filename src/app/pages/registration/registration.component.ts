@@ -64,10 +64,10 @@ export class RegistrationComponent implements OnInit {
           this.emailValidation = false
         }
         else {
-          this.router.navigate(['/student'], { replaceUrl: true })
+          this.router.navigate(['/student/my-messages'], { replaceUrl: true })
           // this.location.replaceState('/student'); 
           //removes current paht from history
-          localStorage.setItem('token', res.token)
+          localStorage.setItem('qosymsha_token', res.token)
           localStorage.setItem('username', this.userModel.name)
           //TODO: hello argun
         }
