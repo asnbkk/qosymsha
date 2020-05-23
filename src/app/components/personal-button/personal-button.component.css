@@ -38,7 +38,8 @@
     transition: 0.2s;
 }
 .dropdown {
-    z-index: 0;
+    z-index: 2;
+    padding: 1rem 0;
     right: 1rem;
     position: absolute;
     top: 1rem;
@@ -50,7 +51,7 @@
 }
 .dropdown_item {
     height: 40px;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: grid;
     cursor: pointer;
     align-items: center;
@@ -59,9 +60,11 @@
     /* transition: 0.2s; */
     font-size: 14px;
     font-weight: 500;
+    color: #414141;
 }
 .dropdown_item:hover {
     background: rgba(235, 235, 235, 0.274);
+    color: #000;
     /* color: #0700FF; */
     /* transition: 0.2s; */
 }
@@ -73,4 +76,9 @@
     opacity: 0;
     transition: 0.2s;
     z-index: -10;
+}
+.dropdown_name {
+    padding: 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
 }

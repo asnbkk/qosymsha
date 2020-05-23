@@ -16,6 +16,7 @@
 input {
     background: #F1F3F4;
     border: none;
-    color: #828282;
+    color: #000;
+    font-size: 14px;
     padding: 0 1rem;
 }

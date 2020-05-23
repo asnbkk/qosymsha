@@ -1,7 +1,6 @@
 <div class="personal" (click)="active = !active">
     <!-- <div class="personal_wrapper"> -->
     <!-- <div class="personal_name">{{name}}</div> -->
-    <!-- <div class="personal_status">{{status}}</div> -->
     <!-- </div> -->
     <div class="personal_avatar">
         <img src="assets/img/user.jpeg" alt="">
@@ -9,16 +8,20 @@
 </div>
 <div (click)="active = false" [className]="active ? 'dropdown_wrapper' : 'dropdown_wrapper disabled'">
     <div class="dropdown">
+        <div class="dropdown_name">
+            <div class="personal_name">{{name}}</div>
+            <div class="personal_status">{{status}}</div>
+        </div>
         <div class="dropdown_item" (click)="onClick()">
-            <span class="material-icons">
-                perm_identity
-            </span>
-            Мои данные
+            <!-- <span class="material-icons"> -->
+                <!-- perm_identity -->
+            <!-- </span> -->
+            Редактировать профиль
         </div>
         <div class="dropdown_item" (click)="onLogout()">
-            <span class="material-icons">
-                directions_run
-            </span> 
+            <!-- <span class="material-icons"> -->
+                <!-- directions_run -->
+            <!-- </span>  -->
             Выйти
         </div>
     </div>
