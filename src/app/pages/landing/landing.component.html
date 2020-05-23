@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header_logo"><app-svg [name]="'logo'"></app-svg></div>
     <div class="header_buttons">
-        <app-button [type]="'text'" [text]="'Войти'"></app-button>
+        <app-button [type]="'text'" routerLink="/login" [text]="'Войти'"></app-button>
         <app-button routerLink="/registration" [type]="'primary'" [text]="'Зарегистрироваться'"></app-button>
     </div>
 </div>

@@ -20,6 +20,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { MySettingsComponent } from './pages/my-settings/my-settings.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MySettingsComponent } from './pages/my-settings/my-settings.component';
     ButtonComponent,
     RegistrationComponent,
     MySettingsComponent,
+    LoginComponent,
   ],
   imports: [
     HttpClientModule,

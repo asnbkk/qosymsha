@@ -8,6 +8,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { MySettingsComponent } from './pages/my-settings/my-settings.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
   {path: '', component: LandingComponent, children: [
   ]},
   {path: 'registration', component: RegistrationComponent},
-  // {path: 'landing', component: LandingComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'student', component: StudentHomeComponent, canActivate: [AuthGuardService], children: [
     {path: 'add-course', component: AddCourseComponent},
     {path: 'my-subjects', component: MySubjectsComponent},
