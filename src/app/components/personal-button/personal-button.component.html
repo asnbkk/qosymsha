@@ -1,10 +1,10 @@
 <div class="personal" (click)="active = !active">
-    <div class="personal_wrapper">
-        <div class="personal_name">{{name}}</div>
-        <div class="personal_status">{{status}}</div>
-    </div>
+    <!-- <div class="personal_wrapper"> -->
+    <!-- <div class="personal_name">{{name}}</div> -->
+    <!-- <div class="personal_status">{{status}}</div> -->
+    <!-- </div> -->
     <div class="personal_avatar">
-        <app-svg [name]="'avatar'"></app-svg>
+        <img src="assets/img/user.jpeg" alt="">
     </div>
 </div>
 <div (click)="active = false" [className]="active ? 'dropdown_wrapper' : 'dropdown_wrapper disabled'">
@@ -16,7 +16,9 @@
             Мои данные
         </div>
         <div class="dropdown_item" (click)="onLogout()">
-            <app-svg [name]="'log-out'"></app-svg>
+            <span class="material-icons">
+                directions_run
+            </span> 
             Выйти
         </div>
     </div>

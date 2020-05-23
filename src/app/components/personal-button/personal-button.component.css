@@ -1,6 +1,6 @@
 .personal {
     display: grid;
-    grid-template-columns: 1fr auto;
+    /* grid-template-columns: 1fr auto; */
     grid-gap: 1rem;
     align-items: center;
     cursor: pointer;
@@ -8,6 +8,17 @@
 }
 .personal_wrapper {
     text-align: end;
+}
+.personal_avatar {
+    height: 32px;
+    width: 32px;
+    display: grid;
+}
+.personal_avatar img {
+    display: grid;
+    max-width: 100%;
+    border-radius: 50%;
+    max-height: 100%;
 }
 .personal_name {
     font-weight: 700;
@@ -45,9 +56,14 @@
     align-items: center;
     grid-template-columns: auto 1fr;
     grid-gap: 1rem;
+    /* transition: 0.2s; */
+    font-size: 14px;
+    font-weight: 500;
 }
 .dropdown_item:hover {
-    background: rgba(235, 235, 235, 0.37);
+    background: rgba(235, 235, 235, 0.274);
+    /* color: #0700FF; */
+    /* transition: 0.2s; */
 }
 .disabled {
     height: 0;

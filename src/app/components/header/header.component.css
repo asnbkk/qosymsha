@@ -12,6 +12,7 @@
 }
 .header_logo {
     margin-left: 1rem;
+    display: grid;
 }
 .header_buttons {
     display: grid;
@@ -19,4 +20,8 @@
     grid-gap: 1.5rem;
     align-items: center;
     margin-right: 1rem;
+}
+.header_buttons * {
+    display: grid;
+    align-items: center;
 }
