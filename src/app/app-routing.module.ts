@@ -7,13 +7,14 @@ import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { MySettingsComponent } from './pages/my-settings/my-settings.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/landing', pathMatch: 'full'},
   {path: 'landing', component: LandingComponent},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'student', component: StudentHomeComponent, children: [
+  {path: 'student', component: StudentHomeComponent, canActivate: [AuthGuardService], children: [
     {path: 'add-course', component: AddCourseComponent},
     {path: 'my-subjects', component: MySubjectsComponent},
     {path: 'my-messages', component: MyMessagesComponent},

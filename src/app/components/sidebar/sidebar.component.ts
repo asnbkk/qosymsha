@@ -18,7 +18,7 @@ export class SidebarComponent implements OnInit {
   ]
   constructor(private router: Router, location: Location) {
     router.events.subscribe(() => {
-      // if (location.path() != "") {
+      // if (location.dpath() != "") {
         let arr = location.path().split('/')
         this.url = arr[arr.length - 1]  
         this.onSelect()

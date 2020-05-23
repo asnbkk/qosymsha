@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventEmitter } from 'protractor';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-registration',
@@ -16,7 +17,8 @@ export class RegistrationComponent implements OnInit {
   // firstInput = 'blur'
   constructor(
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   userModel = {
@@ -62,7 +64,9 @@ export class RegistrationComponent implements OnInit {
           this.emailValidation = false
         }
         else {
-          this.router.navigate(['/student'])
+          this.router.navigate(['/student'], { replaceUrl: true })
+          // this.location.replaceState('/student'); 
+          //removes current paht from history
           localStorage.setItem('token', res.token)
           localStorage.setItem('username', this.userModel.name)
           //TODO: hello argun
@@ -70,6 +74,12 @@ export class RegistrationComponent implements OnInit {
       })
     }
     if (this.userModel.password == '') this.passwordValidation = false
+  }
+
+  keyDownFunction(event) {
+    if(event.keyCode == 13) {
+      this.onSubmit()
+    }
   }
 
 }
