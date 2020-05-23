@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   mode = 'password'
   emailValidation
+  
   emailDuplicate = false
   passwordValidation
   // firstInput = 'blur'
@@ -21,7 +22,6 @@ export class LoginComponent implements OnInit {
 
   userModel = {
     email: '',
-    name: '',
     password: ''
   }
 
@@ -54,19 +54,20 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     if (this.emailValidation && this.passwordValidation) {
-      this.userModel.name = this.userModel.email.split('@')[0]
 
-      this.userService.onRegsiter(this.userModel).subscribe(res => {
+      this.userService.onLogin(this.userModel).subscribe(res => {
         if (res.message) {
           this.emailDuplicate = true
           this.emailValidation = false
+
         }
         else {
           this.router.navigate(['/student/my-messages'], { replaceUrl: true })
           // this.location.replaceState('/student'); 
           //removes current paht from history
           localStorage.setItem('qosymsha_token', res.token)
-          localStorage.setItem('username', this.userModel.name)
+          localStorage.setItem('username', res.user.name)
+          console.log(res.user.name)
           //TODO: hello argun
         }
       })

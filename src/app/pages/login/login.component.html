@@ -9,11 +9,12 @@
             <app-text [type]="'auth-title'" [text]="'Мы вас ждали'"></app-text>
         </div>
         <div class="r_content__email">
+            <div *ngIf="emailDuplicate">
+                <div class="toggle_message">Проверьте правильность указанного E-mail или пароля!</div>
+            </div>
             <input [(ngModel)]="userModel.email" name="email" type="text" (input)="_emailType()"
                 (blur)="_emailValidation($event)" placeholder="Адрес электронной почты">
-            <div *ngIf="emailDuplicate">
-                <div class="toggle_message">Проверьте правильность указанного E-mail!</div>
-            </div>
+            
             <div *ngIf="emailValidation == false">
                 <div class="input_status">
                     <span class="material-icons">

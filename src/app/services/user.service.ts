@@ -15,4 +15,7 @@ export class UserService {
   onRegsiter(user):Observable<any> {
     return this.http.post(this.url + 'signup/', {user: user}, this.headers)
   }
+  onLogin(user): Observable<any> {
+    return this.http.post(this.url + 'login/', {user: user}, this.headers)
+  }
 }
