@@ -13,9 +13,9 @@
                 Адрес электронной почты
             </div>
             <div class="r_content__email">
-                
+
                 <div *ngIf="emailDuplicate">
-                    <div class="toggle_message">Проверьте правильность указанного E-mail или пароля!</div>
+                    <div class="toggle_message">Перепровеьте E-mail или пароля!</div>
                 </div>
                 <input [(ngModel)]="userModel.email" name="email" type="text" (input)="_emailType()"
                     (blur)="_emailValidation($event)" placeholder="example@abc.com">

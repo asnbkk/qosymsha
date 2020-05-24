@@ -67,10 +67,11 @@ input {
 }
 .toggle_message {
     position: absolute;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
     color: #0700FF;
-    top: -1.5rem;
-    left: 0;
+    top: calc(-1rem - 11px);
+    right: 0;
 }
 .input_status span {
     color: #0700FF;
