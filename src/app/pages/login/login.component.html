@@ -6,39 +6,51 @@
 <div class="r">
     <div class="r_content" (keydown)="keyDownFunction($event)">
         <div class="r_content__title">
-            <app-text [type]="'auth-title'" [text]="'Мы вас ждали'"></app-text>
+            <app-text [type]="'auth-title'" [text]="'Добро пожаловать, ' + name"></app-text>
         </div>
-        <div class="r_content__email">
-            <div *ngIf="emailDuplicate">
-                <div class="toggle_message">Проверьте правильность указанного E-mail или пароля!</div>
+        <div>
+            <div class="label">
+                Адрес электронной почты
             </div>
-            <input [(ngModel)]="userModel.email" name="email" type="text" (input)="_emailType()"
-                (blur)="_emailValidation($event)" placeholder="Адрес электронной почты">
-            
-            <div *ngIf="emailValidation == false">
-                <div class="input_status">
-                    <span class="material-icons">
-                        error_outline
-                    </span>
+            <div class="r_content__email">
+                
+                <div *ngIf="emailDuplicate">
+                    <div class="toggle_message">Проверьте правильность указанного E-mail или пароля!</div>
+                </div>
+                <input [(ngModel)]="userModel.email" name="email" type="text" (input)="_emailType()"
+                    (blur)="_emailValidation($event)" placeholder="example@abc.com">
+
+                <div *ngIf="emailValidation == false">
+                    <div class="input_status">
+                        <span class="material-icons">
+                            error_outline
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="r_content__password">
-            <input [(ngModel)]="userModel.password" name="password" type="{{mode}}" placeholder="Пароль"
-                (input)="_passwordValidation($event)">
-            <div class="see_pass" (click)="seePass()">
-                <div *ngIf="mode == 'password'">
-                    <app-svg [name]="'openEye'"></app-svg>
-                </div>
-                <div *ngIf="mode == 'text'">
-                    <app-svg [name]="'closeEye'"></app-svg>
-                </div>
+        <div>
+            <div class="label">
+                Пароль
             </div>
-            <div *ngIf="passwordValidation == false">
-                <div class="input_status">
-                    <span class="material-icons">
-                        error_outline
-                    </span>
+            <div class="r_content__password">
+
+                <input [(ngModel)]="userModel.password" name="password" type="{{mode}}"
+                    (input)="_passwordValidation($event)">
+                <div class="see_pass" (click)="seePass()">
+                    <div *ngIf="mode == 'password'">
+                        <app-svg [name]="'openEye'"></app-svg>
+                    </div>
+                    <div *ngIf="mode == 'text'">
+                        <app-svg [name]="'closeEye'"></app-svg>
+                    </div>
+                </div>
+                <div *ngIf="passwordValidation == false">
+                    <div class="input_status">
+                        <span class="material-icons">
+                            error_outline
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,10 +58,11 @@
             <app-button (click)="onSubmit()" [type]="'primary'" [text]="'Войти'"></app-button>
         </div>
         <div class="r_content__switch___wrapper">
-            <div class="r_content__switch">Еще нет аккаунта? <span routerLink="/registration">Зарегистрироваться</span></div>
-            <div class="r_content__switch" routerLink="/"><span>Забыли пароль?</span></div> 
+            <div class="r_content__switch">Еще нет аккаунта? <span routerLink="/registration">Зарегистрироваться</span>
+            </div>
+            <div class="r_content__switch" routerLink="/"><span>Забыли пароль?</span></div>
         </div>
-        <div class="r_content__bottom">
+        <!-- <div class="r_content__bottom">
             <div class="or">или</div>
             <div class="r_content__bottom___item">
                 <app-svg [name]="'gmail'"></app-svg>
@@ -59,6 +72,6 @@
                 <app-svg [name]="'vk'"></app-svg>
                 Войти с ВКонтакте
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

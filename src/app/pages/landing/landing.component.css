@@ -35,6 +35,7 @@
 .landing_secondary {
     text-align: center;
     line-height: 20px;
+    font-weight: 500;
 }
 .landing_buttons {
     display: grid;

@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
   mode = 'password'
   emailValidation
   
+  name
+  //from localstorage
+  
   emailDuplicate = false
   passwordValidation
   // firstInput = 'blur'
@@ -26,6 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem('username')
   }
   seePass() {
     if (this.mode == 'password')

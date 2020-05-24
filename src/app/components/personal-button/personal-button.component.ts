@@ -21,7 +21,8 @@ export class PersonalButtonComponent implements OnInit {
   }
 
   onLogout() {
-    localStorage.clear()
+    localStorage.removeItem('qosymsha_token')
+    localStorage.removeItem('email')
     this.router.navigate(['/'])
   }
 
