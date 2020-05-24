@@ -68,7 +68,8 @@ export class RegistrationComponent implements OnInit {
           // this.location.replaceState('/student'); 
           //removes current paht from history
           localStorage.setItem('qosymsha_token', res.token)
-          localStorage.setItem('username', this.userModel.name)
+          localStorage.setItem('username', res.user.name)
+          localStorage.setItem('email', res.user.email)
           //TODO: hello argun
         }
       })

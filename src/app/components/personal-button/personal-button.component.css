@@ -75,9 +75,10 @@
 }
 .disabled .dropdown {
     /* top: calc(-80px - 52px); */
-    opacity: 0;
-    transition: 0.2s;
-    z-index: -10;
+    /* opacity: 0; */
+    /* transition: 0.2s; */
+    /* z-index: -10; */
+    display: none;
 }
 .dropdown_name {
     padding: 0 2rem;

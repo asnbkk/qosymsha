@@ -1,1 +1,30 @@
-<p>settings-public works!</p>
+<div class="p">
+    <div class="p_header">
+        <div class="p_header__img">
+            <img src="assets/img/user.jpeg" alt="">
+            <div class="p_header__img___buttons">
+                <span>Поменять аватар</span>
+                <span>Удалить</span>
+            </div>
+        </div>
+        <div class="p_header__button"><app-button [text]="'Стать умником'" [type]="'text'"></app-button></div>
+    </div>
+
+    <div class="p_input-group">
+        <div class="input">
+            <div class="input_label">Имя пользователя</div>
+            <input type="text" name="username" [(ngModel)]="settingsModel.username">
+        </div>
+        <div class="input">
+            <div class="input_label">О себе</div>
+            <input type="text" name="status">
+        </div>
+        <div class="input">
+            <div class="input_label">Адрес электронной почты</div>
+            <input type="text" name="email" [(ngModel)]="settingsModel.email">
+        </div>
+    </div>
+    <div class="p_save">
+        <app-button [type]="'primary'" [text]="'Сохранить изменения'"></app-button>
+    </div>
+</div>

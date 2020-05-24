@@ -17,7 +17,7 @@ export class PersonalButtonComponent implements OnInit {
   }
 
   onClick() {
-    this.router.navigate(['/student/my-settings'])
+    this.router.navigate(['/student/my-settings/public'])
   }
 
   onLogout() {

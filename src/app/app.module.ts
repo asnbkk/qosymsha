@@ -24,6 +24,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SettingsPublicComponent } from './pages/settings-public/settings-public.component';
 import { SettingsSidebarComponent } from './components/settings-sidebar/settings-sidebar.component';
 import { SettingsPersonalComponent } from './pages/settings-personal/settings-personal.component';
+import { SettingsPasswordComponent } from './pages/settings-password/settings-password.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SettingsPersonalComponent } from './pages/settings-personal/settings-pe
     SettingsPublicComponent,
     SettingsSidebarComponent,
     SettingsPersonalComponent,
+    SettingsPasswordComponent,
   ],
   imports: [
     HttpClientModule,

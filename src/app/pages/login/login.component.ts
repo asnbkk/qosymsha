@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit {
           //removes current paht from history
           localStorage.setItem('qosymsha_token', res.token)
           localStorage.setItem('username', res.user.name)
+          localStorage.setItem('email', res.user.email)
           console.log(res.user.name)
           //TODO: hello argun
         }

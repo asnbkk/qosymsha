@@ -11,6 +11,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { LoginComponent } from './pages/login/login.component';
 import { SettingsPublicComponent } from './pages/settings-public/settings-public.component';
 import { SettingsPersonalComponent } from './pages/settings-personal/settings-personal.component';
+import { SettingsPasswordComponent } from './pages/settings-password/settings-password.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     {path: 'my-messages', component: MyMessagesComponent},
     {path: 'my-settings', component: MySettingsComponent , children: [
       {path: 'public', component: SettingsPublicComponent},
-      {path: 'personal', component: SettingsPersonalComponent}
+      {path: 'personal', component: SettingsPersonalComponent},
+      {path: 'password', component: SettingsPasswordComponent}
     ]}
   ]}
 ];
