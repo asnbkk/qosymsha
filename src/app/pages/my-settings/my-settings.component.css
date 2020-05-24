@@ -9,5 +9,5 @@
     justify-items: center;
 }
 .set_content {
-    width: 70%;
+    max-width: 550px;
 }
