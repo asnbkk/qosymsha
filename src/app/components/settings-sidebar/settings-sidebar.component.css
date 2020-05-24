@@ -1,0 +1,17 @@
+.set {
+    position: relative;
+    margin-top: calc(231px - 84px);
+    font-weight: 500;
+    display: grid;
+    grid-gap: 1rem;
+    color: #414141;
+}
+.set_item {
+    cursor: pointer;
+}
+.set_item:not(.active):hover {
+    color: #000;
+}
+.active {
+    color: #0700FF;
+}

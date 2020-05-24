@@ -19,8 +19,9 @@ export class SidebarComponent implements OnInit {
   constructor(private router: Router, location: Location) {
     router.events.subscribe(() => {
       // if (location.dpath() != "") {
-        let arr = location.path().split('/')
-        this.url = arr[arr.length - 1]  
+        // let arr = location.path().split('/')
+        // this.url = arr[arr.length - 1]  
+        this.url = location.path()
         this.onSelect()
         //seems working
       // } 
@@ -34,7 +35,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onSelect() {
-    let temp = this.items.find(o => o.path == this.url)
+    let temp = this.items.find(o => this.url.includes(o.path))
     this.margin = this.items.indexOf(temp)
   }
 

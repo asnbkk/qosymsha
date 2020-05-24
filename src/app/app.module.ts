@@ -21,6 +21,9 @@ import { ButtonComponent } from './components/button/button.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { MySettingsComponent } from './pages/my-settings/my-settings.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SettingsPublicComponent } from './pages/settings-public/settings-public.component';
+import { SettingsSidebarComponent } from './components/settings-sidebar/settings-sidebar.component';
+import { SettingsPersonalComponent } from './pages/settings-personal/settings-personal.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { LoginComponent } from './pages/login/login.component';
     RegistrationComponent,
     MySettingsComponent,
     LoginComponent,
+    SettingsPublicComponent,
+    SettingsSidebarComponent,
+    SettingsPersonalComponent,
   ],
   imports: [
     HttpClientModule,
