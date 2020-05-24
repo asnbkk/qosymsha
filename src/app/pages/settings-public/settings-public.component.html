@@ -1,13 +1,22 @@
 <div class="p">
     <div class="p_header">
         <div class="p_header__img">
-            <img src="assets/img/user.jpeg" alt="">
+            <div class="img_wrapper">
+                <img src="assets/img/user.jpeg" alt="">
+                <div class="upload_photo">
+                    <span class="material-icons">
+                        add_photo_alternate
+                    </span>
+                </div>
+            </div>
             <div class="p_header__img___buttons">
-                <span>Поменять аватар</span>
-                <span>Удалить</span>
+                <span>{{settingsModel.username}}</span>
+                <span>{{settingsModel.status}}</span>
             </div>
         </div>
-        <div class="p_header__button"><app-button [text]="'Стать умником'" [type]="'text'"></app-button></div>
+        <div class="p_header__button">
+            <app-button [text]="'Стать умником'" [type]="'text'"></app-button>
+        </div>
     </div>
 
     <div class="p_input-group">
@@ -17,7 +26,7 @@
         </div>
         <div class="input">
             <div class="input_label">О себе</div>
-            <input type="text" name="status">
+            <input type="text" name="status" [(ngModel)]="settingsModel.status">
         </div>
         <div class="input">
             <div class="input_label">Адрес электронной почты</div>

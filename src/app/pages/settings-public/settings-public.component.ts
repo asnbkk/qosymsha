@@ -16,6 +16,7 @@ export class SettingsPublicComponent implements OnInit {
   ngOnInit(): void {
     this.settingsModel.username = localStorage.getItem('username')
     this.settingsModel.email = localStorage.getItem('email')
+    this.settingsModel.status = localStorage.getItem('status') || ''
   }
 
 }
