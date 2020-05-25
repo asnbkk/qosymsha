@@ -1,38 +1,22 @@
-<div class="ac">
-    <div class="ac_left">
-        <div class="university">
-            <app-text [text]="'Выбрать университет'" [type]="'title'" [counter]="1"></app-text>
-            <div class="ac_list">
-                <div *ngFor="let u of universities">
-                    <app-university-card [university]="u" [status]="faculties" (click)="onUniversitySelect(u.name)">
-                    </app-university-card>
-                </div>
+<div class="add-course">
+    <div class="left">
+        <div class="add-course_header">
+            <div class="add-course_header__uni">
+                <span class="material-icons">
+                    school
+                </span>
+                <select name="uni" id="uni">
+                    <option value="" class="placeholder" disabled selected>Выбрать университет</option>
+                    <option *ngFor="let u of universities" value="{{u.name}}">{{u.name}}</option>
+                </select>
             </div>
-        </div>
-        <div class="faculty" *ngIf="faculty">
-            <app-text [text]="'Выбрать факультет'" [type]="'title'" [counter]="2"></app-text>
-            <div class="ac_list">
-                <div *ngFor="let f of faculties">
-                    <app-card (click)="onFacultySelect(f)" [status]="selectedCardName" [name]="f"></app-card>
-                </div>
-            </div>
-        </div>
-        <div class="course" *ngIf="course">
-            <app-text [text]="'Выбрать предмет'" [type]="'title'" [counter]="3"></app-text>
-            <div class="ac_list">
-                <div *ngFor="let c of courses">
-                    <app-card (click)="onCourseSelect(c.name)" [status]="selectedCourseName" [name]="c.name"></app-card>
-                </div>
-            </div>
-        </div>
-        <div class="tutor" *ngIf="tutor">
-            <app-text [text]="'Выбрать умника'" [type]="'title'" [counter]="4"></app-text>
-            <div class="ac_list">
-                <div *ngFor="let t of tutors">
-                    <app-card (click)="onCourseSelect(t.name)" [name]="t.name"></app-card>
-                </div>
+            <div class="add-course_header__course">
+                <input type="text" placeholder="Название предмета">
+                <span class="material-icons">
+                    search
+                </span>
             </div>
         </div>
     </div>
-    <div class="ac_right"></div>
+    <div class="right"></div>
 </div>
