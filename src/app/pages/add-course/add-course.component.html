@@ -5,10 +5,19 @@
                 <span class="material-icons">
                     school
                 </span>
-                <select name="uni" id="uni">
+                <mat-form-field>
+                    <mat-label>Choose an option</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let u of universities" value="{{u.name}}" >{{u.name}}</mat-option>
+                      <!-- <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+                      <mat-option value="option3">Option 3</mat-option> -->
+                    </mat-select>
+                  </mat-form-field>
+                <!-- <select name="uni" id="uni">
                     <option value="" class="placeholder" disabled selected>Выбрать университет</option>
                     <option *ngFor="let u of universities" value="{{u.name}}">{{u.name}}</option>
-                </select>
+                </select> -->
             </div>
             <div class="add-course_header__course">
                 <input type="text" placeholder="Название предмета">

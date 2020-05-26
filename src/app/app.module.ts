@@ -25,6 +25,9 @@ import { SettingsPublicComponent } from './pages/settings-public/settings-public
 import { SettingsSidebarComponent } from './components/settings-sidebar/settings-sidebar.component';
 import { SettingsPersonalComponent } from './pages/settings-personal/settings-personal.component';
 import { SettingsPasswordComponent } from './pages/settings-password/settings-password.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { SettingsPasswordComponent } from './pages/settings-password/settings-pa
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    MatSelectModule,
+    FormsModule,
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
