@@ -1,6 +1,7 @@
 .add-course {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
 }
 .left {
     display: grid;
@@ -121,6 +122,31 @@ select {
 }
 .add-course_list {
     display: grid;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
     /* grid-gap: 1rem; */
+}
+.add-course_list__title {
+    font-size: 14px;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.list {
+    margin-top: 2rem;
+}
+
+
+.right {
+    display: grid;
+    border-left: 1px solid #e1e1e1;
+    position: fixed;
+    right: 0;
+    top: 52px;
+    height: calc(100vh - 52px);
+}
+.right_inner {
+    background: blue;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { UniversityService } from 'src/app/services/university.service';
 import { CourseService } from 'src/app/services/course.service';
 import { TutorService } from 'src/app/services/tutor.service';
@@ -12,44 +12,44 @@ export class AddCourseComponent implements OnInit {
   // faculty: boolean = false
   // course: boolean = false
   // tutor: boolean = false
-// 
+  // 
   // selectedCardName
   // selectedCourseName
-    // 
+  // 
   // universities = []
   // faculties = []
   // courses = []
   // tutors = []
   // constructor(
-    // private universityService: UniversityService,
-    // private courseService: CourseService,
-    // private tutorService: TutorService
-    // ) { }
-// 
+  // private universityService: UniversityService,
+  // private courseService: CourseService,
+  // private tutorService: TutorService
+  // ) { }
+  // 
   // ngOnInit(): void {
-    // this.getUniversity()
+  // this.getUniversity()
   // }
-// 
+  // 
   // getUniversity() {
-    // this.universityService.getUniversities().subscribe(data => {
-      // this.universities = data
-    // })
+  // this.universityService.getUniversities().subscribe(data => {
+  // this.universities = data
+  // })
   // }
-// 
+  // 
   // onUniversitySelect(name) {
-    // this.faculty = true
-    // let uni = this.universities.find(o => o.name == name)
-    // this.faculties = uni.faculties
-    // console.log(this.faculties)
+  // this.faculty = true
+  // let uni = this.universities.find(o => o.name == name)
+  // this.faculties = uni.faculties
+  // console.log(this.faculties)
   // }
-// 
+  // 
   // onFacultySelect(name) {
-    // this.course = true
-    // this.selectedCardName = name
-// 
-    // this.courseService.getCourses(name).subscribe(data => {
-      // this.courses = data
-    // })
+  // this.course = true
+  // this.selectedCardName = name
+  // 
+  // this.courseService.getCourses(name).subscribe(data => {
+  // this.courses = data
+  // })
   // }
 
   // onCourseSelect(name) {
@@ -60,38 +60,46 @@ export class AddCourseComponent implements OnInit {
   //   })
   // }
   universities = [
-    {"name": "Казахстанско-Британский технический университет"},
-    {"name": "Назарбаев Университет"}
+    { "name": "Казахстанско-Британский технический университет" },
+    { "name": "Назарбаев Университет" }
   ]
 
   tutors = [
     {
-      "name": "makpal", 
-      "status": "chill out - have fun", 
-      "position": "Студент КБТУ", 
+      "name": "makpal",
+      "status": "chill out - have fun",
+      "position": "Студент КБТУ",
       "studentAmount": "1",
       "rating": "90",
       "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений. Как принято считать, базовые сценарии поведения пользователей лишь добавляют."
     },
     {
-      "name": "shmakpal", 
-      "status": "chill out - have have", 
-      "position": "Студент ЧБТУ", 
+      "name": "shmakpal",
+      "status": "chill out - have have",
+      "position": "Студент ЧБТУ",
       "studentAmount": "4",
       "rating": "75",
       "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
     },
     {
-      "name": "shmakpal", 
-      "status": "chill out - have have", 
-      "position": "Студент ЧБТУ", 
+      "name": "shmakpal",
+      "status": "chill out - have have",
+      "position": "Студент ЧБТУ",
       "studentAmount": "10",
       "rating": "75",
       "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
     }
   ]
   
-  ngOnInit() {
+  width
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.width = (window.innerWidth - 250) / 3
+    console.log(this.width)
+  }
 
+  ngOnInit() {
+    this.width = (window.innerWidth - 250) / 3;
+    console.log(this.width)
   }
 } 
