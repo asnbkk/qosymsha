@@ -28,6 +28,7 @@ import { SettingsPasswordComponent } from './pages/settings-password/settings-pa
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
+import { TutorCardComponent } from './components/tutor-card/tutor-card.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {MatSelectModule} from '@angular/material/select';
     SettingsSidebarComponent,
     SettingsPersonalComponent,
     SettingsPasswordComponent,
+    TutorCardComponent,
   ],
   imports: [
     HttpClientModule,

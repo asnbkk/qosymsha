@@ -1,0 +1,30 @@
+<div class="tutor">
+    <div class="tutor_header">
+        <div class="tutor_header__img"><img src="assets/img/user.jpeg" alt=""></div>
+        <div class="tutor_header__name">
+            <div class="name">{{tutor.name}}</div>
+            <div class="status">{{tutor.status}}</div>
+        </div>
+        <div class="tutor_header__stat">
+            <div class="tutor_header__stat___item">{{tutor.position}}</div>
+            <div class="tutor_header__stat___item">
+                {{tutor.studentAmount}}
+                <span class="material-icons">
+                    perm_identity
+                </span>
+            </div>
+            <div class="tutor_header__stat___item">
+                {{tutor.rating}}
+                <span class="material-icons">
+                    star_outline
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="tutor_bottom">
+        <div class="tutor_bottom__bio">{{tutor.bio}}</div>
+        <div class="tutor_bottom__button">
+            <app-button [type]="'text'" [text]="'Написать'"></app-button>
+        </div>
+    </div>
+</div>

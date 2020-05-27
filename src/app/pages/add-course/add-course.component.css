@@ -7,7 +7,7 @@
 }
 .add-course_header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 }
 .add-course_header__course {
@@ -118,4 +118,9 @@ select {
 }
 ::ng-deep .mat-select-panel:not([class*=mat-elevation-z]) {
     box-shadow: 0px 10px 50px rgba(0,0,0,0.1);
+}
+.add-course_list {
+    display: grid;
+    margin-top: 1rem;
+    /* grid-gap: 1rem; */
 }

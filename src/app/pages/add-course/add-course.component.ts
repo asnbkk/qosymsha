@@ -63,6 +63,33 @@ export class AddCourseComponent implements OnInit {
     {"name": "Казахстанско-Британский технический университет"},
     {"name": "Назарбаев Университет"}
   ]
+
+  tutors = [
+    {
+      "name": "makpal", 
+      "status": "chill out - have fun", 
+      "position": "Студент КБТУ", 
+      "studentAmount": "1",
+      "rating": "90",
+      "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений. Как принято считать, базовые сценарии поведения пользователей лишь добавляют."
+    },
+    {
+      "name": "shmakpal", 
+      "status": "chill out - have have", 
+      "position": "Студент ЧБТУ", 
+      "studentAmount": "4",
+      "rating": "75",
+      "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
+    },
+    {
+      "name": "shmakpal", 
+      "status": "chill out - have have", 
+      "position": "Студент ЧБТУ", 
+      "studentAmount": "10",
+      "rating": "75",
+      "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
+    }
+  ]
   
   ngOnInit() {
 
