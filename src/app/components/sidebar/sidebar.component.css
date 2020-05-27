@@ -2,7 +2,7 @@
     background: #fff;
     position: fixed;
     min-height: 100%;
-    padding-top: 100px;
+    padding-top: calc(52px + 2rem);
     z-index: 1;
     overflow-y: hidden;
     width: 250px;

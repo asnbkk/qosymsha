@@ -64,6 +64,8 @@ export class AddCourseComponent implements OnInit {
     { "name": "Назарбаев Университет" }
   ]
 
+  courses = ["Web Development", "Calculus 1", "Calculus 2", "Introduction to media"]
+
   tutors = [
     {
       "name": "makpal",

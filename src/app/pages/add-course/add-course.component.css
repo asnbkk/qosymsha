@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+    height: 40px;
 }
 .add-course_header__course {
     position: relative;
@@ -129,7 +130,7 @@ select {
     background: #f7f7f7;
 }
 ::ng-deep .mat-select-panel:not([class*=mat-elevation-z]) {
-    box-shadow: 0px 10px 50px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 .add-course_list {
     display: grid;
@@ -150,11 +151,4 @@ select {
     display: grid;
     border-left: 1px solid #e1e1e1;
     height: calc(100vh - 52px);
-}
-.right_inner {
-    background: blue;
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: grid;
 }

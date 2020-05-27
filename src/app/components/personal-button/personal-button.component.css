@@ -24,7 +24,9 @@
     font-weight: 700;
 }
 .personal_status {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
     color: #0700FF;
 }
 .dropdown_wrapper {

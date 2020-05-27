@@ -14,7 +14,6 @@ import { MySubjectsComponent } from './pages/my-subjects/my-subjects.component';
 import { MyMessagesComponent } from './pages/my-messages/my-messages.component';
 import { TextComponent } from './components/text/text.component';
 import { UniversityCardComponent } from './components/university-card/university-card.component';
-import { FormsModule } from '@angular/forms'
 import { CardComponent } from './components/card/card.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -29,6 +28,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import { TutorCardComponent } from './components/tutor-card/tutor-card.component';
+import { MiniChatComponent } from './components/mini-chat/mini-chat.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,12 +58,16 @@ import { TutorCardComponent } from './components/tutor-card/tutor-card.component
     SettingsPersonalComponent,
     SettingsPasswordComponent,
     TutorCardComponent,
+    MiniChatComponent,
+    AutocompleteComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MatSelectModule,
+    MatAutocompleteModule,
     FormsModule,
     NgbModule,
     BrowserAnimationsModule

@@ -1,0 +1,30 @@
+form {
+    display: grid;
+}
+input {
+    border: none;
+    background: #F6F6F6;
+    display: grid;
+    color: #000;
+    font-size: 14px;
+    /* padding: 0 1rem; */
+    padding: 0;
+    border-radius: 5px;
+}
+::ng-deep .mat-option {
+    font-size: 14px;
+}
+::ng-deep .mat-autocomplete-panel:not([class*=mat-elevation-z]) {
+    border-radius: 5px;
+}
+/* ::ng-deep .cdk-overlay-pane { */
+    /* width: 400px; */
+    /* background: red; */
+/* } */
+.example-full-width {
+  width: 300px;
+}
+/* ::ng-deep {
+  width: 800px
+} */
+  
