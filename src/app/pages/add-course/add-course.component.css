@@ -1,14 +1,17 @@
 .add-course {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 2rem;
-    /* overflow-y: hidden; */
+    margin: -2rem;
+    height: calc(100vh - 52px);
     /* position: fixed; */
+    overflow: hidden;
     /* top: calc(52px + 2rem); */
     /* right: 0; */
 }
 .left {
     /* margin-left: calc(250px + 2rem); */
+    padding: 2rem;
+    overflow-y: scroll;
     display: grid;
     /* height: 100vh; */
     /* overflow-y: scroll; */
@@ -146,9 +149,6 @@ select {
 .right {
     display: grid;
     border-left: 1px solid #e1e1e1;
-    position: fixed;
-    right: 0;
-    top: 52px;
     height: calc(100vh - 52px);
 }
 .right_inner {

@@ -98,16 +98,6 @@ export class AddCourseComponent implements OnInit {
       "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
     }
   ]
-
-  width
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.width = (window.innerWidth - 250) / 3
-    console.log(this.width)
-  }
-
   ngOnInit() {
-    this.width = (window.innerWidth - 250) / 3;
-    console.log(this.width)
   }
 } 
