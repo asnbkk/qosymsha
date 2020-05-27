@@ -88,9 +88,17 @@ export class AddCourseComponent implements OnInit {
       "studentAmount": "10",
       "rating": "75",
       "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
+    },
+    {
+      "name": "shmakpal",
+      "status": "chill out - have have",
+      "position": "Студент ЧБТУ",
+      "studentAmount": "10",
+      "rating": "75",
+      "bio": "Господа, внедрение современных методик требует от нас анализа новых предложений."
     }
   ]
-  
+
   width
   @HostListener('window:resize', ['$event'])
   onResize(event) {
