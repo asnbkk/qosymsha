@@ -138,6 +138,7 @@ select {
 .right {
     display: grid;
     border-left: 1px solid #e1e1e1;
+    /* box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.1); */
     position: fixed;
     right: 0;
     top: 52px;
