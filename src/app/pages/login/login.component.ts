@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.name = localStorage.getItem('username')
+    this.name = localStorage.getItem('username') || "друг"
   }
   seePass() {
     if (this.mode == 'password')
